@@ -19,17 +19,9 @@ for i = 1 : file_num
 	% load data
 	x = load(input_file);
 	data1 = x.data;
-	label = x.label;
 	[m, n, k] = size(data1);
 	
-	% initiate reformed matrix
-	data = zeros(n, k, m);
-	for j = 1 : m
-		data(:, :, j) = reshape(data1(j, :, :), [n, k]);
-	end
+	% 
 	
-	% save reformed matrix
-	
-	save(output_file, 'data', 'label');
 	
 end
