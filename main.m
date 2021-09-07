@@ -1,3 +1,6 @@
+close all
+clear all
+
 % set input and output folder
 
 inputpath = 'D:\works\Dataset\DEAP\data_preprocessed_matlab\';
@@ -19,7 +22,7 @@ for i = 1 : file_num
 	% load data
 	x = load(input_file);
 	data1 = x.data;
-	label = x.label;
+	labels = x.labels;
 	[m, n, k] = size(data1);
 	
 	% initiate reformed matrix
@@ -30,6 +33,6 @@ for i = 1 : file_num
 	
 	% save reformed matrix
 	
-	save(output_file, 'data', 'label');
+	save(output_file, 'data', 'labels');
 	
 end
